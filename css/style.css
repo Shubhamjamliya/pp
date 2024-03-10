@@ -49,7 +49,8 @@ section {
     height: 100vh;
     color: white;
     overflow-y: auto;
-    padding-bottom: 15px 
+    padding-bottom: 15px; 
+    transition: all ease-in-out 0.5s;
 }
 
 .head {
@@ -85,6 +86,7 @@ section {
 .social img {
     margin: 4px;
     filter:invert(1);
+    transition: 0.3s;
 }
 .social img:hover{
     outline: none;
@@ -119,17 +121,13 @@ nav ul li img {
     filter: invert(1);
 }
 
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     position: fixed;
-    /* visibility: hidden; */
-    opacity: 0;
+    display: none;
     right: 15px;
     bottom: 15px;
     z-index: 996;
@@ -137,24 +135,14 @@ nav ul li img {
     width: 40px;
     height: 40px;
     border-radius: 50px;
+    padding: 8px;
     transition: all 0.4s;
   }
   
-  .back-to-top img {
-    font-size: 28px;
-    color: #fff;
-    line-height: 0;
-  }
-  
-  .back-to-top:hover {
+#top:hover {
     background: #2eafec;
     color: #fff;
-  }
-  
-  .back-to-top.active {
-    visibility: visible;
-    opacity: 1;
-  }
+}
   
 /* --------------------------------HERO------------------------------------------------- */
 #hero {
@@ -711,8 +699,7 @@ form .copyright{
     #header{
      position: absolute;
      left:-130%;
-     width:373px;
-     transition: all .3s;
+     width:300px;
      background-color: black;
      padding: 0;
      height: 100vh;
@@ -731,14 +718,12 @@ form .copyright{
     z-index: 9998;
     border: 0;
     font-size: 24px;
-    transition: all 0.8s;
+    transition: all 0.4s;
     outline: none !important;
     background-color: #149ddd;
     color: #fff;
     width: 40px;
     height: 40px;
-    align-items: center;
-    justify-content: center;
     line-height: 0;
     border-radius: 50px;
     cursor: pointer;
